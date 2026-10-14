@@ -1,0 +1,19 @@
+{
+  "name": "shopkart-mern",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ShopKart Full Stack Customer Authentication Project",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "start": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "start:backend": "npm --prefix backend start",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "build:frontend": "npm --prefix frontend run build",
+    "server": "npm run build && npm run start:backend"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
